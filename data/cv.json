@@ -1,59 +1,67 @@
 {
   "hero": {
     "title": "Building modern backend systems and developer experiences.",
-    "description": "Datamatiker student focused on ASP.NET Core, APIs, architecture, security and scalable systems."
+    "description": "Datamatiker student focused on C#, .NET, backend architecture, DevOps workflows and scalable systems."
   },
+
   "skills": [
     "C#",
     ".NET",
     "ASP.NET Core",
+    "Blazor",
     "Entity Framework",
     "SQL Server",
     "Docker",
-    "JWT",
-    "GitHub",
+    "GitHub Actions",
     "REST APIs",
-    "Clean Architecture"
+    "Clean Architecture",
+    "CI/CD",
+    "Testing",
+    "MSTest",
+    "Moq",
+    "Linux"
   ],
+
   "projects": [
     {
       "title": "Slottets-Drifttavlen",
-      "description": "Fullstack semester project focused on backend architecture, maintainability and scalable systems."
+      "description": "Fullstack Blazor system with Clean Architecture, CI/CD pipelines, Docker and MySQL."
     },
+
     {
-      "title": "Authentication API",
-      "description": "JWT authentication system using ASP.NET Core and secure token handling."
+      "title": "Floozys Hotel",
+      "description": "WPF + MVVM hotel management system with 269 unit tests using MSTest and Moq."
     },
+
     {
-      "title": "Docker Infrastructure",
-      "description": "Containerized backend environment using Docker and SQL Server."
+      "title": "CV Site",
+      "description": "Developer portfolio with GitHub Pages, automated PDF generation and deployment workflows."
     }
   ],
+
   "timeline": [
     {
       "date": "2024 — Present",
       "title": "Datamatiker Student — UCL, Odense",
-      "description": "Studying software development with focus on C#, .NET, databases, system architecture and backend development."
+      "description": "Focused on backend development, architecture, databases, APIs and maintainable systems."
     },
+
     {
       "date": "Former",
-      "title": "Group Leader — Danish Army Engineer Regiment, Skive",
-      "description": "Leadership experience with responsibility, structure, teamwork and coordination under pressure."
+      "title": "Group Leader — Danish Engineer Regiment",
+      "description": "Leadership, structure, teamwork and coordination under pressure."
     },
+
     {
-      "date": "Volunteer / Co-founder",
+      "date": "Volunteer",
       "title": "Coding Pirates Vrå",
-      "description": "Helped start a local Coding Pirates initiative focused on children, creativity, programming and technology."
+      "description": "Helped establish local programming and technology activities for children and young people."
     },
+
     {
-      "date": "Personal Development",
-      "title": "CTF, Cybersecurity & International Experience",
-      "description": "Experience with online Capture The Flag challenges, global travel and living abroad, strengthening adaptability and problem solving."
-    },
-    {
-      "date": "Family",
-      "title": "Dedicated Father",
-      "description": "Proud father with a strong focus on presence, responsibility and supporting my son’s curiosity and development."
+      "date": "Cybersecurity",
+      "title": "CTF & Security Interest",
+      "description": "Interested in CTF challenges, OSINT, security thinking and technical problem solving."
     }
   ]
 }
