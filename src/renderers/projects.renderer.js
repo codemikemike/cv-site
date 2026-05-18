@@ -1,13 +1,18 @@
-export function renderProjects(cv) {
+export function renderProjects(projects) {
+  const container = document.querySelector("#projects-container");
 
-  const projectContainer =
-    document.querySelector(".project-card");
+  container.innerHTML = "";
 
-  const project =
-    cv.projects[0];
+  projects.forEach((project) => {
+    const card = document.createElement("article");
 
-  projectContainer.innerHTML = `
-    <h3>${project.name}</h3>
-    <p>${project.description}</p>
-  `;
+    card.className = "project-card glow-hover";
+
+    card.innerHTML = `
+      <h3>${project.title}</h3>
+      <p>${project.description}</p>
+    `;
+
+    container.appendChild(card);
+  });
 }

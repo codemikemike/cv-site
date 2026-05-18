@@ -1,15 +1,10 @@
 import { appConfig } from "../config/app.config.js";
 
 export async function getCvData() {
-
-  const response =
-    await fetch(appConfig.cvDataPath);
+  const response = await fetch(appConfig.cvDataPath);
 
   if (!response.ok) {
-
-    throw new Error(
-      "Failed to load CV data."
-    );
+    throw new Error("Could not load CV data.");
   }
 
   return await response.json();

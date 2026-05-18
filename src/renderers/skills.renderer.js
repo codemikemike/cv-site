@@ -1,17 +1,11 @@
-export function renderSkills(cv) {
+export function renderSkills(skills) {
+  const container = document.querySelector("#skills-container");
 
-  const skillsContainer =
-    document.querySelector(".skills");
+  container.innerHTML = "";
 
-  skillsContainer.innerHTML = "";
-
-  cv.skills.forEach((skill) => {
-
-    const skillElement =
-      document.createElement("li");
-
-    skillElement.textContent = skill;
-
-    skillsContainer.appendChild(skillElement);
+  skills.forEach((skill) => {
+    const item = document.createElement("li");
+    item.textContent = skill;
+    container.appendChild(item);
   });
 }

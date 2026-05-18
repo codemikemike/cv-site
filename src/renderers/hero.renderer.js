@@ -1,14 +1,4 @@
-export function renderHero(cv) {
-
-  document.querySelector(".brand").textContent =
-    `${cv.personal.name}.dev`;
-
-  document.querySelector(".hero-tag").textContent =
-    `🚀 ${cv.personal.title}`;
-
-  document.querySelector("#hero-title").textContent =
-    cv.hero.headline;
-
-  document.querySelector(".hero-description").textContent =
-    cv.about.description;
+export function renderHero(hero) {
+  document.querySelector("#hero-title").textContent = hero.title;
+  document.querySelector(".hero-description").textContent = hero.description;
 }
