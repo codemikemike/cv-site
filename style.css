@@ -1119,3 +1119,120 @@ main {
 
 /* #endregion */
 
+
+/* #region Theme Toggle */
+
+.theme-toggle {
+
+  position: fixed;
+
+  right: 2rem;
+  bottom: 2rem;
+
+  width: 64px;
+  height: 64px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #7c5cff,
+      #00d4ff
+    );
+
+  color: white;
+
+  font-size: 1.5rem;
+
+  cursor: pointer;
+
+  z-index: 9999;
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.35);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.theme-toggle:hover {
+
+  transform:
+    translateY(-6px) scale(1.05);
+}
+
+/* #endregion */
+
+
+/* #region Light Theme */
+
+body.light-theme {
+
+  --background: #f4f7fb;
+
+  --surface:
+    rgba(255,255,255,0.75);
+
+  --surface-border:
+    rgba(0,0,0,0.06);
+
+  --text-primary:
+    #0f172a;
+
+  --text-secondary:
+    #475569;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(124,92,255,0.08),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(0,212,255,0.08),
+      transparent 30%
+    ),
+    var(--background);
+}
+
+body.light-theme .brand,
+body.light-theme .nav-links a,
+body.light-theme .skills li,
+body.light-theme .secondary-btn {
+
+  color:
+    #0f172a;
+}
+
+body.light-theme .secondary-btn {
+
+  border:
+    1px solid rgba(0,0,0,0.08);
+}
+
+/* #endregion */
+
+
+/* #region Global Theme Transitions */
+
+body,
+.glass-card,
+.project-card,
+.timeline-item,
+.skills li,
+.site-header,
+.secondary-btn {
+
+  transition:
+    background 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease;
+}
+
+/* #endregion */
+
