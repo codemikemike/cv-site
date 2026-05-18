@@ -98,7 +98,7 @@ cv:
       - bullet: Continuous self-driven backend and infrastructure learning
 
 design:
-  theme: engineeringresumes
+  theme: classic
 
 locale:
   language: english
