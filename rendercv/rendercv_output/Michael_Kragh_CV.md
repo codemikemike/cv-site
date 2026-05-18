@@ -14,7 +14,11 @@ deployment workflows and scalable backend solutions using modern .NET technologi
 
 
 # Education
-## **UCL University College**, AP Degree in Computer Science in Datamatiker
+## **UCL University College**, Datamatiker
+
+**AP Degree in Computer Science**
+
+
 Aug 2024 – present
 
 - C#
@@ -31,7 +35,11 @@ Aug 2024 – present
 
 
 
-## **Aalborg University Admission Courses**, Supplementary Courses in Engineering Preparation- Mathematics
+## **Aalborg University Admission Courses**, Engineering Preparation
+
+**Supplementary Courses**
+
+- Mathematics
 
 - Technical subjects
 
@@ -40,7 +48,9 @@ Aug 2024 – present
 
 
 # Experience
-## **Group Leader**, Danish Engineer Regiment -- Skive
+## **Danish Engineer Regiment**, Group Leader
+
+Skive
 
 - Leadership and responsibility
 
@@ -52,7 +62,7 @@ Aug 2024 – present
 
 
 
-## **Volunteer / Co-Founder**, Coding Pirates Vrå
+## **Coding Pirates Vrå**, Volunteer / Co-Founder
 
 - Helped establish local programming community
 

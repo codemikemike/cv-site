@@ -14,38 +14,38 @@
   page-bottom-margin: 0.7in,
   page-left-margin: 0.7in,
   page-right-margin: 0.7in,
-  page-show-footer: false,
+  page-show-footer: true,
   page-show-top-note: true,
   colors-body: rgb(0, 0, 0),
-  colors-name: rgb(0, 0, 0),
-  colors-headline: rgb(0, 0, 0),
-  colors-connections: rgb(0, 0, 0),
-  colors-section-titles: rgb(0, 0, 0),
-  colors-links: rgb(0, 0, 0),
+  colors-name: rgb(0, 79, 144),
+  colors-headline: rgb(0, 79, 144),
+  colors-connections: rgb(0, 79, 144),
+  colors-section-titles: rgb(0, 79, 144),
+  colors-links: rgb(0, 79, 144),
   colors-footer: rgb(128, 128, 128),
   colors-top-note: rgb(128, 128, 128),
   typography-line-spacing: 0.6em,
   typography-alignment: "justified",
   typography-date-and-location-column-alignment: right,
-  typography-font-family-body: "XCharter",
-  typography-font-family-name: "XCharter",
-  typography-font-family-headline: "XCharter",
-  typography-font-family-connections: "XCharter",
-  typography-font-family-section-titles: "XCharter",
+  typography-font-family-body: "Source Sans 3",
+  typography-font-family-name: "Source Sans 3",
+  typography-font-family-headline: "Source Sans 3",
+  typography-font-family-connections: "Source Sans 3",
+  typography-font-family-section-titles: "Source Sans 3",
   typography-font-size-body: 10pt,
-  typography-font-size-name: 25pt,
+  typography-font-size-name: 30pt,
   typography-font-size-headline: 10pt,
   typography-font-size-connections: 10pt,
-  typography-font-size-section-titles: 1.2em,
+  typography-font-size-section-titles: 1.4em,
   typography-small-caps-name: false,
   typography-small-caps-headline: false,
   typography-small-caps-connections: false,
   typography-small-caps-section-titles: false,
-  typography-bold-name: false,
+  typography-bold-name: true,
   typography-bold-headline: false,
   typography-bold-connections: false,
   typography-bold-section-titles: true,
-  links-underline: true,
+  links-underline: false,
   links-show-external-link-icon: false,
   header-alignment: center,
   header-photo-width: 3.5cm,
@@ -53,31 +53,31 @@
   header-space-below-headline: 0.7cm,
   header-space-below-connections: 0.7cm,
   header-connections-hyperlink: true,
-  header-connections-show-icons: false,
-  header-connections-display-urls-instead-of-usernames: true,
-  header-connections-separator: "|",
+  header-connections-show-icons: true,
+  header-connections-display-urls-instead-of-usernames: false,
+  header-connections-separator: "",
   header-connections-space-between-connections: 0.5cm,
-  section-titles-type: "with_full_line",
+  section-titles-type: "with_partial_line",
   section-titles-line-thickness: 0.5pt,
   section-titles-space-above: 0.5cm,
   section-titles-space-below: 0.3cm,
   sections-allow-page-break: true,
-  sections-space-between-text-based-entries: 0.15cm,
-  sections-space-between-regular-entries: 0.42cm,
+  sections-space-between-text-based-entries: 0.3em,
+  sections-space-between-regular-entries: 1.2em,
   entries-date-and-location-width: 4.15cm,
-  entries-side-space: 0cm,
+  entries-side-space: 0.2cm,
   entries-space-between-columns: 0.1cm,
   entries-allow-page-break: false,
-  entries-short-second-row: false,
+  entries-short-second-row: true,
   entries-degree-width: 1cm,
   entries-summary-space-left: 0cm,
-  entries-summary-space-above: 0.08cm,
-  entries-highlights-bullet:  text(13pt, [•], baseline: -0.6pt) ,
-  entries-highlights-nested-bullet:  text(13pt, [•], baseline: -0.6pt) ,
-  entries-highlights-space-left: 0cm,
-  entries-highlights-space-above: 0.08cm,
-  entries-highlights-space-between-items: 0.08cm,
-  entries-highlights-space-between-bullet-and-text: 0.3em,
+  entries-summary-space-above: 0cm,
+  entries-highlights-bullet:  "•" ,
+  entries-highlights-nested-bullet:  "•" ,
+  entries-highlights-space-left: 0.15cm,
+  entries-highlights-space-above: 0cm,
+  entries-highlights-space-between-items: 0cm,
+  entries-highlights-space-between-bullet-and-text: 0.5em,
   date: datetime(
     year: 2026,
     month: 5,
@@ -89,9 +89,9 @@
 = Michael Kragh
 
 #connections(
-  [Denmark],
-  [#link("mailto:contact@example.com", icon: false, if-underline: false, if-color: false)[contact\@example.com]],
-  [#link("https://github.com/codemikemike", icon: false, if-underline: false, if-color: false)[github.com\/codemikemike]],
+  [#connection-with-icon("location-dot")[Denmark]],
+  [#link("mailto:contact@example.com", icon: false, if-underline: false, if-color: false)[#connection-with-icon("envelope")[contact\@example.com]]],
+  [#link("https://github.com/codemikemike", icon: false, if-underline: false, if-color: false)[#connection-with-icon("github")[codemikemike]]],
 )
 
 
@@ -108,14 +108,8 @@ deployment workflows and scalable backend solutions using modern .NET technologi
 
 #education-entry(
   [
-    #strong[UCL University College], AP Degree in Computer Science in Datamatiker
+    #strong[UCL University College], Datamatiker
 
-  ],
-  [
-    Aug 2024 – present
-
-  ],
-  main-column-second-row: [
     - C\#
 
     - ASP.NET Core
@@ -129,16 +123,19 @@ deployment workflows and scalable backend solutions using modern .NET technologi
     - Testing & Deployment
 
   ],
+  [
+    Aug 2024 – present
+
+  ],
+  degree-column: [
+    #strong[AP Degree in Computer Science]
+  ],
 )
 
-  #education-entry(
+#education-entry(
   [
-    #strong[Aalborg University Admission Courses], Supplementary Courses in Engineering Preparation
+    #strong[Aalborg University Admission Courses], Engineering Preparation
 
-  ],
-  [
-  ],
-  main-column-second-row: [
     - Mathematics
 
     - Technical subjects
@@ -146,18 +143,19 @@ deployment workflows and scalable backend solutions using modern .NET technologi
     - Engineering preparation
 
   ],
+  [
+  ],
+  degree-column: [
+    #strong[Supplementary Courses]
+  ],
 )
 
 == Experience
 
-  #regular-entry(
+#regular-entry(
   [
-    #strong[Group Leader], Danish Engineer Regiment -- Skive
+    #strong[Danish Engineer Regiment], Group Leader
 
-  ],
-  [
-  ],
-  main-column-second-row: [
     - Leadership and responsibility
 
     - Planning and coordination
@@ -167,22 +165,24 @@ deployment workflows and scalable backend solutions using modern .NET technologi
     - Team management
 
   ],
+  [
+    Skive
+
+  ],
 )
 
-  #regular-entry(
+#regular-entry(
   [
-    #strong[Volunteer \/ Co-Founder], Coding Pirates Vrå
+    #strong[Coding Pirates Vrå], Volunteer \/ Co-Founder
 
-  ],
-  [
-  ],
-  main-column-second-row: [
     - Helped establish local programming community
 
     - Technology and coding activities for children
 
     - Digital creativity and learning
 
+  ],
+  [
   ],
 )
 
@@ -192,12 +192,6 @@ deployment workflows and scalable backend solutions using modern .NET technologi
   [
     #strong[Slottets-Drifttavlen]
 
-  ],
-  [
-    2026
-
-  ],
-  main-column-second-row: [
     - Blazor and ASP.NET Core semester project
 
     - Clean Architecture and repository pattern
@@ -207,23 +201,25 @@ deployment workflows and scalable backend solutions using modern .NET technologi
     - Backend-focused architecture
 
   ],
+  [
+    2026
+
+  ],
 )
 
 #regular-entry(
   [
     #strong[Floozys Hotel]
 
-  ],
-  [
-    2025
-
-  ],
-  main-column-second-row: [
     - WPF + MVVM hotel management system
 
     - SQL Server and Entity Framework
 
     - 269 unit tests using MSTest and Moq
+
+  ],
+  [
+    2025
 
   ],
 )
@@ -232,12 +228,6 @@ deployment workflows and scalable backend solutions using modern .NET technologi
   [
     #strong[Developer Portfolio]
 
-  ],
-  [
-    2026
-
-  ],
-  main-column-second-row: [
     - GitHub Pages portfolio
 
     - Automated PDF generation
@@ -245,6 +235,10 @@ deployment workflows and scalable backend solutions using modern .NET technologi
     - GitHub Actions workflows
 
     - HTML\/CSS frontend architecture
+
+  ],
+  [
+    2026
 
   ],
 )
