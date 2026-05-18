@@ -1,0 +1,106 @@
+cv:
+  name: Michael Kragh
+  location: Denmark
+  email: contact@example.com
+  social_networks:
+    - network: GitHub
+      username: codemikemike
+
+  sections:
+
+    profile:
+      - |
+        Datamatiker student at UCL in Odense focused on backend development,
+        architecture, APIs, databases and maintainable software systems.
+
+        Strong interest in Clean Architecture, CI/CD, testing, cybersecurity,
+        deployment workflows and scalable backend solutions using modern .NET technologies.
+
+    education:
+      - institution: UCL University College
+        area: Datamatiker
+        degree: AP Degree in Computer Science
+        start_date: 2024-08
+        end_date: present
+        highlights:
+          - C#
+          - ASP.NET Core
+          - Databases
+          - APIs
+          - System Architecture
+          - Testing & Deployment
+
+      - institution: Aalborg University Admission Courses
+        area: Engineering Preparation
+        degree: Supplementary Courses
+        highlights:
+          - Mathematics
+          - Technical subjects
+          - Engineering preparation
+
+    experience:
+      - company: Danish Engineer Regiment
+        position: Group Leader
+        location: Skive
+        highlights:
+          - Leadership and responsibility
+          - Planning and coordination
+          - Structured work under pressure
+          - Team management
+
+      - company: Coding Pirates Vrå
+        position: Volunteer / Co-Founder
+        highlights:
+          - Helped establish local programming community
+          - Technology and coding activities for children
+          - Digital creativity and learning
+
+    projects:
+      - name: Slottets-Drifttavlen
+        date: 2026
+        highlights:
+          - Blazor and ASP.NET Core semester project
+          - Clean Architecture and repository pattern
+          - Docker, CI/CD and MySQL
+          - Backend-focused architecture
+
+      - name: Floozys Hotel
+        date: 2025
+        highlights:
+          - WPF + MVVM hotel management system
+          - SQL Server and Entity Framework
+          - 269 unit tests using MSTest and Moq
+
+      - name: Developer Portfolio
+        date: 2026
+        highlights:
+          - GitHub Pages portfolio
+          - Automated PDF generation
+          - GitHub Actions workflows
+          - HTML/CSS frontend architecture
+
+    skills:
+      - label: Backend
+        details: C#, .NET, ASP.NET Core, REST APIs, Blazor
+
+      - label: Database
+        details: SQL Server, MySQL, Entity Framework, Dapper
+
+      - label: DevOps
+        details: Docker, GitHub Actions, CI/CD, Git
+
+      - label: Architecture
+        details: Clean Architecture, Repository Pattern, SOLID, Testing
+
+    certificates:
+      - bullet: More than 50 completed courses, labs and certifications
+      - bullet: Cybersecurity and Capture The Flag learning
+      - bullet: Continuous self-driven backend and infrastructure learning
+
+design:
+  theme: engineeringresumes
+
+locale:
+  language: english
+
+
