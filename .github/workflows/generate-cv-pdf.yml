@@ -4,6 +4,8 @@ on:
   push:
     paths:
       - "docs/cv.md"
+      - "docs/cv-pdf.css"
+      - "scripts/generate-pdf.mjs"
       - ".github/workflows/generate-cv-pdf.yml"
 
 permissions:
@@ -13,30 +15,43 @@ jobs:
   build-pdf:
     runs-on: ubuntu-latest
 
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install PDF dependencies
+      - name: Install Pandoc
         run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended texlive-latex-recommended
+          sudo apt-get install -y pandoc
 
-      - name: Generate CV PDF
+      - name: Install Playwright
+        run: |
+          npm init -y
+          npm install playwright
+          npx playwright install --with-deps chromium
+
+      - name: Generate styled HTML
         run: |
           pandoc docs/cv.md \
-            -o docs/cv.pdf \
-            --pdf-engine=xelatex \
-            -V geometry:margin=0.85in \
-            -V mainfont="DejaVu Sans" \
-            -V colorlinks=true \
-            -V linkcolor=blue \
-            -V urlcolor=blue
+            --standalone \
+            --css=cv-pdf.css \
+            --metadata title="Mike CV" \
+            -o docs/cv.html
 
-      - name: Commit generated PDF
+      - name: Generate PDF with Chromium
+        run: |
+          node scripts/generate-pdf.mjs
+
+      - name: Commit generated files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/cv.pdf
-          git commit -m "Generate CV PDF" || echo "No PDF changes"
+
+          git add docs/cv.html docs/cv.pdf
+
+          git commit -m "Generate styled CV PDF" || echo "No changes"
+
           git push

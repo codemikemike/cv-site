@@ -1,0 +1,65 @@
+@page {
+  size: A4;
+  margin: 18mm;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #111827;
+  line-height: 1.45;
+  font-size: 13px;
+}
+
+h1 {
+  font-size: 34px;
+  margin-bottom: 4px;
+  color: #0f172a;
+}
+
+h2 {
+  font-size: 18px;
+  margin-top: 28px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #5b8cff;
+  color: #2563eb;
+}
+
+h3 {
+  font-size: 15px;
+  margin-bottom: 4px;
+  color: #111827;
+}
+
+strong {
+  color: #0f172a;
+}
+
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+ul {
+  margin-top: 6px;
+}
+
+li {
+  margin-bottom: 3px;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #d1d5db;
+  margin: 18px 0;
+}
+
+p {
+  margin: 6px 0;
+}
+
+blockquote {
+  border-left: 4px solid #5b8cff;
+  padding-left: 12px;
+  color: #475569;
+}
