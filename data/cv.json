@@ -3,7 +3,6 @@
     "title": "Building modern backend systems and developer experiences.",
     "description": "Datamatiker student focused on ASP.NET Core, APIs, architecture, security and scalable systems."
   },
-
   "skills": [
     "C#",
     ".NET",
@@ -16,35 +15,45 @@
     "REST APIs",
     "Clean Architecture"
   ],
-
   "projects": [
     {
       "title": "Slottets-Drifttavlen",
       "description": "Fullstack semester project focused on backend architecture, maintainability and scalable systems."
     },
-
     {
       "title": "Authentication API",
       "description": "JWT authentication system using ASP.NET Core and secure token handling."
     },
-
     {
       "title": "Docker Infrastructure",
       "description": "Containerized backend environment using Docker and SQL Server."
     }
   ],
-
   "timeline": [
     {
       "date": "2024 — Present",
-      "title": "Datamatiker Student",
-      "description": "Studying software development with focus on C#, .NET, databases and system development."
+      "title": "Datamatiker Student — UCL, Odense",
+      "description": "Studying software development with focus on C#, .NET, databases, system architecture and backend development."
     },
-
     {
-      "date": "Semester Project",
-      "title": "Slottets-Drifttavlen",
-      "description": "Worked with repositories, interfaces, Docker, SQL Server and Clean Architecture."
+      "date": "Former",
+      "title": "Group Leader — Danish Army Engineer Regiment, Skive",
+      "description": "Leadership experience with responsibility, structure, teamwork and coordination under pressure."
+    },
+    {
+      "date": "Volunteer / Co-founder",
+      "title": "Coding Pirates Vrå",
+      "description": "Helped start a local Coding Pirates initiative focused on children, creativity, programming and technology."
+    },
+    {
+      "date": "Personal Development",
+      "title": "CTF, Cybersecurity & International Experience",
+      "description": "Experience with online Capture The Flag challenges, global travel and living abroad, strengthening adaptability and problem solving."
+    },
+    {
+      "date": "Family",
+      "title": "Dedicated Father",
+      "description": "Proud father with a strong focus on presence, responsibility and supporting my son’s curiosity and development."
     }
   ]
 }
