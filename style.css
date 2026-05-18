@@ -1380,3 +1380,33 @@ body,
 
 /* #endregion */
 
+
+/* #region Mobile Nav Hard Fix */
+
+.mobile-menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media (max-width: 900px) {
+  .mobile-menu-toggle {
+    display: flex !important;
+  }
+
+  .site-nav {
+    position: relative;
+  }
+
+  .nav-links {
+    display: none !important;
+  }
+
+  .nav-links.is-open {
+    display: grid !important;
+  }
+}
+
+/* #endregion */
+
