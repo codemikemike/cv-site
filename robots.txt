@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://codemikemike.github.io/cv-site/sitemap.xml

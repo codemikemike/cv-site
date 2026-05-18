@@ -1,0 +1,9 @@
+{
+  "name": "Mike Developer Portfolio",
+  "short_name": "Mike.dev",
+  "description": "Modern C# .NET developer portfolio",
+  "start_url": "/cv-site/",
+  "display": "standalone",
+  "background_color": "#050816",
+  "theme_color": "#7c5cff"
+}
