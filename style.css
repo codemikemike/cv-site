@@ -1758,3 +1758,68 @@ body {
 
 /* #endregion */
 
+
+/* #region Certificate Slider Upgrade */
+
+.certificate-slider {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(260px, 320px);
+  gap: 1.25rem;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline mandatory;
+  padding: 2rem 0 1rem;
+  scrollbar-width: thin;
+}
+
+.certificate-slider .certificate-card {
+  scroll-snap-align: start;
+  min-height: 310px;
+}
+
+.certificate-slider::-webkit-scrollbar {
+  height: 10px;
+}
+
+.certificate-slider::-webkit-scrollbar-track {
+  background: rgba(255,255,255,.05);
+  border-radius: 999px;
+}
+
+.certificate-slider::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #2563eb, #38bdf8);
+  border-radius: 999px;
+}
+
+.certificate-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.certificate-image::after {
+  content: "CERTIFICATE";
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  font-size: .7rem;
+  letter-spacing: .18em;
+  color: rgba(255,255,255,.55);
+}
+
+.certificate-card:nth-child(odd) .certificate-image {
+  background:
+    radial-gradient(circle at top left, rgba(124,92,255,.55), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(0,212,255,.35), transparent 40%),
+    #0f172a;
+}
+
+.certificate-card:nth-child(even) .certificate-image {
+  background:
+    radial-gradient(circle at top right, rgba(56,189,248,.45), transparent 35%),
+    radial-gradient(circle at bottom left, rgba(91,140,255,.40), transparent 40%),
+    #111827;
+}
+
+/* #endregion */
+
