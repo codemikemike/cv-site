@@ -9,170 +9,168 @@
 
 body {
   margin: 0;
-  background: #dbe2ea;
+  background: #0f172a;
   font-family: Arial, sans-serif;
   color: #111827;
 }
 
-.page {
+.resume {
   width: 210mm;
   min-height: 297mm;
-
   display: grid;
-  grid-template-columns: 78mm 1fr;
-
-  background: white;
+  grid-template-columns: 72mm 1fr;
+  background: #f8fafc;
 }
 
 .sidebar {
-  background:
-    linear-gradient(
-      180deg,
-      #0f172a,
-      #111827
-    );
-
-  color: white;
-
-  padding: 34px 26px;
+  background: #0f172a;
+  color: #cbd5e1;
+  padding: 28px 22px;
 }
 
-.avatar-wrapper {
-  margin-bottom: 22px;
-}
-
-.avatar {
-  width: 92px;
-  height: 92px;
-
-  border-radius: 28px;
-
+.photo {
+  width: 84px;
+  height: 84px;
+  border-radius: 24px;
   display: grid;
   place-items: center;
-
-  background:
-    linear-gradient(
-      135deg,
-      #2563eb,
-      #38bdf8
-    );
-
-  font-size: 34px;
+  margin-bottom: 22px;
+  background: linear-gradient(135deg, #2563eb, #38bdf8);
+  color: white;
+  font-size: 30px;
   font-weight: 900;
 }
 
 .sidebar h1 {
   margin: 0;
-  font-size: 28px;
+  color: white;
+  font-size: 29px;
   line-height: .95;
-  letter-spacing: -1px;
+  letter-spacing: -1.5px;
+  text-transform: uppercase;
 }
 
 .role {
-  color: #93c5fd;
-  margin-top: 12px;
-  margin-bottom: 28px;
-  font-size: 13px;
+  margin: 12px 0 28px;
+  color: #7dd3fc;
+  font-weight: 700;
 }
 
-.sidebar-section {
+.sidebar section {
   margin-top: 26px;
 }
 
-.sidebar-section h2 {
+.sidebar h2 {
+  margin: 0 0 10px;
   color: #38bdf8;
-
-  font-size: 12px;
-
-  letter-spacing: .12em;
-
-  margin-bottom: 10px;
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
 }
 
-.sidebar-section p,
-.sidebar-section li {
-  color: #cbd5e1;
-  font-size: 12px;
+.sidebar p,
+.sidebar li {
+  font-size: 11.5px;
   line-height: 1.5;
 }
 
-.sidebar-section ul {
-  padding-left: 18px;
-}
-
-.content {
-  padding: 34px;
-  background: #f8fafc;
-}
-
-.hero {
-  margin-bottom: 28px;
-}
-
-.hero h2 {
+.sidebar ul {
+  padding-left: 16px;
   margin: 0;
-
-  font-size: 28px;
-
-  line-height: 1.05;
-
-  letter-spacing: -1px;
-
-  color: #0f172a;
 }
 
-.hero p {
-  margin-top: 14px;
-
-  color: #475569;
-
-  line-height: 1.6;
+.pill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding-left: 0 !important;
+  list-style: none;
 }
 
-.section {
-  margin-bottom: 24px;
+.pill-list li {
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: rgba(56, 189, 248, .12);
+  border: 1px solid rgba(56, 189, 248, .25);
 }
 
-.section h3 {
-  font-size: 13px;
-
-  letter-spacing: .12em;
-
-  color: #2563eb;
-
-  margin-bottom: 14px;
+.main {
+  padding: 30px 34px;
 }
 
-.card {
-  background: white;
-
-  border-radius: 18px;
-
-  padding: 18px;
-
-  margin-bottom: 14px;
-
-  box-shadow:
-    0 10px 30px rgba(15,23,42,.08);
-
-  border:
-    1px solid rgba(15,23,42,.06);
+.top {
+  padding: 22px;
+  margin-bottom: 22px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #ffffff, #eff6ff);
+  border: 1px solid #dbeafe;
 }
 
-.card h4 {
+.eyebrow {
   margin: 0 0 8px;
-
-  color: #0f172a;
-
-  font-size: 15px;
+  color: #2563eb;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .12em;
 }
 
-.card p {
+.top h2 {
   margin: 0;
+  color: #0f172a;
+  font-size: 27px;
+  line-height: 1.08;
+  letter-spacing: -1.4px;
+}
 
+.block {
+  margin-bottom: 20px;
+}
+
+.block h3 {
+  margin: 0 0 10px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #2563eb;
+  color: #0f172a;
+  font-size: 14px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.block > p {
+  margin: 0;
   color: #475569;
+  font-size: 12.5px;
+  line-height: 1.55;
+}
 
-  line-height: 1.6;
+.item {
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  border-radius: 16px;
+  background: white;
+  border: 1px solid #e5e7eb;
+}
+
+.item h4 {
+  margin: 3px 0 6px;
+  color: #111827;
+  font-size: 13.5px;
+}
+
+.item p {
+  margin: 0;
+  color: #475569;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.date {
+  color: #2563eb;
+  font-size: 10.5px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .08em;
 }
 
 @media print {
