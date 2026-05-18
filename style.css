@@ -1236,3 +1236,64 @@ body,
 
 /* #endregion */
 
+
+/* #region Professional Spacing Fix */
+
+.hero {
+  min-height: 78vh;
+}
+
+.section {
+  padding-block: 3.75rem;
+}
+
+.glass-card,
+.project-card,
+.timeline-item,
+.contact-section {
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+/* #endregion */
+
+
+/* #region Stronger Project Layout */
+
+#projects .project-grid {
+  margin-top: 2rem;
+}
+
+#projects .project-card {
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#projects .project-card::after {
+  content: "View case study →";
+  margin-top: 2rem;
+  color: #8fdcff;
+  font-weight: 800;
+}
+
+/* #endregion */
+
+
+/* #region Better Contact */
+
+.contact-section {
+  padding: 4rem;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(124, 92, 255, 0.14),
+      rgba(0, 212, 255, 0.07)
+    );
+}
+
+/* #endregion */
+
