@@ -11,6 +11,7 @@ export function renderProjects(projects) {
     card.innerHTML = `
       <h3>${project.title}</h3>
       <p>${project.description}</p>
+      <a class="project-link" href="portfolio.html">View in portfolio →</a>
     `;
 
     container.appendChild(card);
