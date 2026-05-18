@@ -28,3 +28,20 @@ async function bootstrap() {
 }
 
 bootstrap();
+
+window.addEventListener("scroll", () => {
+
+  const scrollTop =
+    document.documentElement.scrollTop;
+
+  const scrollHeight =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+
+  const scrollPercentage =
+    (scrollTop / scrollHeight) * 100;
+
+  document.querySelector(".scroll-progress").style.width =
+    `${scrollPercentage}%`;
+});
+
