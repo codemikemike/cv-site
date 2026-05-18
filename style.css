@@ -1004,3 +1004,41 @@ main {
 
 /* #endregion */
 
+
+/* #region Modern Layout */
+
+.section {
+
+  padding-block:
+    8rem;
+}
+
+.section-title {
+
+  font-size:
+    clamp(2.5rem, 6vw, 4rem);
+
+  margin-bottom:
+    2.5rem;
+
+  letter-spacing:
+    -2px;
+}
+
+.about-text {
+
+  font-size:
+    1.2rem;
+
+  max-width:
+    850px;
+
+  color:
+    var(--text-secondary);
+
+  line-height:
+    1.9;
+}
+
+/* #endregion */
+
