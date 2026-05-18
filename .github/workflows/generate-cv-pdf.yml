@@ -3,33 +3,38 @@ name: Generate CV PDF
 on:
   push:
     paths:
-      - 'docs/cv.md'
+      - "docs/cv.md"
+      - ".github/workflows/generate-cv-pdf.yml"
+
+permissions:
+  contents: write
 
 jobs:
   build-pdf:
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install Pandoc
+      - name: Install PDF dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc texlive-latex-base
+          sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended texlive-latex-recommended
 
-      - name: Generate PDF
+      - name: Generate CV PDF
         run: |
-          pandoc docs/cv.md -o docs/cv.pdf
+          pandoc docs/cv.md \
+            -o docs/cv.pdf \
+            --pdf-engine=xelatex \
+            -V geometry:margin=1in \
+            -V mainfont="DejaVu Sans"
 
-      - name: Commit PDF
+      - name: Commit generated PDF
         run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
 
           git add docs/cv.pdf
-
-          git commit -m "Auto-generate CV PDF" || echo "No changes"
-
+          git commit -m "Generate CV PDF" || echo "No PDF changes"
           git push
