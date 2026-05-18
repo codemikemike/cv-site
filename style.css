@@ -759,3 +759,248 @@ main {
 
 /* #endregion */
 
+
+/* #region Section System */
+
+.section {
+
+  position: relative;
+
+  padding-block: 8rem;
+}
+
+.section-title {
+
+  font-size:
+    clamp(2.5rem, 5vw, 4rem);
+
+  margin-bottom: 3rem;
+
+  letter-spacing: -2px;
+}
+
+/* #endregion */
+
+
+/* #region Premium Skills */
+
+.skills {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 1rem;
+}
+
+.skills li {
+
+  position: relative;
+
+  overflow: hidden;
+
+  padding:
+    1rem 1.4rem;
+
+  border-radius: 16px;
+
+  background:
+    rgba(255,255,255,0.05);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter:
+    blur(12px);
+
+  transition:
+    all 0.35s ease;
+}
+
+.skills li::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(124,92,255,0.25),
+      rgba(0,212,255,0.15)
+    );
+
+  opacity: 0;
+
+  transition:
+    opacity 0.35s ease;
+}
+
+.skills li:hover {
+
+  transform:
+    translateY(-6px);
+
+  border-color:
+    rgba(124,92,255,0.45);
+}
+
+.skills li:hover::before {
+
+  opacity: 1;
+}
+
+/* #endregion */
+
+
+/* #region Project Grid */
+
+.project-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(320px, 1fr)
+    );
+
+  gap: 2rem;
+}
+
+.project-card {
+
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 2rem;
+
+  border-radius: 28px;
+
+  background:
+    rgba(255,255,255,0.05);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  transition:
+    all 0.4s ease;
+}
+
+.project-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(124,92,255,0.12),
+      rgba(0,212,255,0.06)
+    );
+
+  opacity: 0;
+
+  transition:
+    opacity 0.4s ease;
+}
+
+.project-card:hover {
+
+  transform:
+    translateY(-10px);
+
+  border-color:
+    rgba(124,92,255,0.35);
+}
+
+.project-card:hover::before {
+
+  opacity: 1;
+}
+
+.project-card h3 {
+
+  font-size: 1.6rem;
+
+  margin-bottom: 1rem;
+}
+
+/* #endregion */
+
+
+/* #region Premium Navbar */
+
+.site-header {
+
+  backdrop-filter:
+    blur(24px);
+
+  background:
+    rgba(5,8,22,0.55);
+
+  border-bottom:
+    1px solid rgba(255,255,255,0.06);
+}
+
+.site-nav {
+
+  padding:
+    1.25rem 0;
+}
+
+.brand {
+
+  font-size: 1.3rem;
+
+  letter-spacing: -1px;
+}
+
+/* #endregion */
+
+
+/* #region Glow Hover */
+
+.glow-hover {
+
+  position: relative;
+}
+
+.glow-hover::after {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  border-radius: inherit;
+
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(124,92,255,0.25),
+      transparent 70%
+    );
+
+  opacity: 0;
+
+  transition:
+    opacity 0.35s ease;
+
+  pointer-events: none;
+}
+
+.glow-hover:hover::after {
+
+  opacity: 1;
+}
+
+/* #endregion */
+
