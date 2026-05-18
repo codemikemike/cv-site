@@ -9,9 +9,9 @@ Portfolio: https://codemikemike.github.io/cv-site/
 
 ## Profile
 
-Datamatiker student focused on backend development, clean architecture and maintainable software systems.
+Datamatiker student focused on backend development, scalable systems and maintainable software architecture.
 
-I work with C#, .NET, ASP.NET Core, SQL Server, Docker and GitHub workflows. My main focus is building structured backend systems with clear separation of concerns, secure APIs and deployment-friendly architecture.
+I work with C#, .NET, ASP.NET Core, SQL Server, Docker and GitHub workflows. My primary interest is building structured backend systems with clean separation of concerns, secure APIs and deployment-friendly architecture.
 
 ---
 
@@ -51,6 +51,51 @@ I work with C#, .NET, ASP.NET Core, SQL Server, Docker and GitHub workflows. My 
 - Separation of Concerns
 - Maintainability
 - System Development
+
+---
+
+## Experience
+
+### Group Leader – Danish Army Engineer Regiment, Skive
+
+Former group leader within the Danish Engineer Regiment in Skive.
+
+Worked with:
+
+- leadership
+- responsibility
+- coordination under pressure
+- teamwork
+- planning and structure
+
+The experience strengthened my discipline, adaptability and ability to maintain overview in demanding situations.
+
+---
+
+### Co-Founder / Volunteer – Coding Pirates Vrå
+
+Helped establish Coding Pirates in Vrå — a non-profit initiative focused on strengthening children’s technological creativity and IT skills through playful learning and programming activities.
+
+Contributed to creating a local community around:
+
+- programming
+- technology
+- creativity
+- digital learning for children and young people
+
+---
+
+### Capture The Flag (CTF) & Cybersecurity Interest
+
+Active interest in cybersecurity and online Capture The Flag challenges, including intelligence-themed and security-oriented problem solving environments.
+
+Areas of interest include:
+
+- OSINT
+- problem solving
+- security thinking
+- technical analysis
+- investigative methodology
 
 ---
 
@@ -105,32 +150,42 @@ Modern developer portfolio hosted with GitHub Pages.
 
 ## Education
 
-### Datamatiker
+### UCL Erhvervsakademi og Professionshøjskole – Datamatiker, Odense
 
-Software development education focused on:
+Currently studying Computer Science / Datamatiker with focus on:
 
-- Programming
-- Databases
-- System development
-- Web development
-- Architecture
-- Testing
-- Deployment
-- Project work
+- software development
+- system architecture
+- databases
+- APIs and backend systems
+- security
+- deployment and maintainability
+- project collaboration
+
+The education combines practical software development with system design, programming and modern development workflows.
 
 ---
 
-## Current Focus
+### HF & Supplementary Higher Education Courses
 
-- Building stronger C# and .NET backend skills
-- Understanding software architecture deeply
-- Improving Clean Architecture usage
-- Learning professional GitHub workflows
-- Creating maintainable developer projects
+Completed HF and additional upper secondary level subjects, including engineering admission courses related to Aalborg University.
+
+---
+
+## Personal Profile
+
+Beyond software development, I am also a dedicated father to my young son and deeply value being present in his growth, curiosity and development.
+
+I have travelled extensively and lived abroad for periods of time, which has strengthened my adaptability and ability to navigate new environments and cultures comfortably.
+
+I thrive in learning-oriented environments and enjoy combining technical curiosity with structure, creativity and continuous improvement.
 
 ---
 
 ## Contact
 
-GitHub: https://github.com/codemikemike  
-Portfolio: https://codemikemike.github.io/cv-site/
+GitHub:
+https://github.com/codemikemike
+
+Portfolio:
+https://codemikemike.github.io/cv-site/
