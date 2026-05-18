@@ -1,0 +1,39 @@
+\documentclass[11pt]{article}
+
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{fontspec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{parskip}
+
+\setmainfont{DejaVu Sans}
+
+\definecolor{Accent}{HTML}{5B8CFF}
+\definecolor{Text}{HTML}{111827}
+
+\color{Text}
+
+\titleformat{\section}
+{\Large\bfseries\color{Accent}}
+{}
+{0em}
+{}
+
+\titleformat{\subsection}
+{\large\bfseries}
+{}
+{0em}
+{}
+
+\setlist[itemize]{
+  noitemsep,
+  topsep=2pt
+}
+
+\begin{document}
+
+$body$
+
+\end{document}

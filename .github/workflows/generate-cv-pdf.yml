@@ -5,6 +5,7 @@ on:
     paths:
       - "docs/cv.md"
       - ".github/workflows/generate-cv-pdf.yml"
+      - "docs/template/eisvogel.tex"
 
 permissions:
   contents: write
@@ -14,27 +15,37 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install PDF dependencies
+      - name: Install Dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended texlive-latex-recommended
 
-      - name: Generate CV PDF
+          sudo apt-get install -y \
+            pandoc \
+            texlive-xetex \
+            texlive-fonts-recommended \
+            texlive-latex-extra
+
+      - name: Generate Styled PDF
         run: |
           pandoc docs/cv.md \
-            -o docs/cv.pdf \
+            --from markdown \
+            --template docs/template/eisvogel.tex \
             --pdf-engine=xelatex \
-            -V geometry:margin=1in \
-            -V mainfont="DejaVu Sans"
+            -V colorlinks=true \
+            -V urlcolor=blue \
+            -o docs/cv.pdf
 
-      - name: Commit generated PDF
+      - name: Commit PDF
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
           git add docs/cv.pdf
-          git commit -m "Generate CV PDF" || echo "No PDF changes"
+
+          git commit -m "Generate styled CV PDF" || echo "No changes"
+
           git push
