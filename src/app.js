@@ -1,77 +1,134 @@
-import { getCvData }
-  from "./services/cv.service.js";
 
-import { renderHero }
-  from "./renderers/hero.renderer.js";
+// #region DOM References
 
-import { renderSkills }
-  from "./renderers/skills.renderer.js";
+const projectsContainer =
+  document.querySelector("#projects-container");
 
-import { renderProjects }
-  from "./renderers/projects.renderer.js";
+const skillsContainer =
+  document.querySelector("#skills-container");
 
-async function bootstrap() {
+const timelineContainer =
+  document.querySelector("#timeline-container");
 
-  try {
+// #endregion
 
-    const cv =
-      await getCvData();
 
-    renderHero(cv);
-    renderSkills(cv);
-    renderProjects(cv);
+// #region Fetch CV Data
 
-  } catch (error) {
+async function loadCvData() {
 
-    console.error(error);
-  }
+  const response =
+    await fetch("./data/cv.json");
+
+  return await response.json();
 }
 
-bootstrap();
-
-window.addEventListener("scroll", () => {
-
-  const scrollTop =
-    document.documentElement.scrollTop;
-
-  const scrollHeight =
-    document.documentElement.scrollHeight -
-    document.documentElement.clientHeight;
-
-  const scrollPercentage =
-    (scrollTop / scrollHeight) * 100;
-
-  document.querySelector(".scroll-progress").style.width =
-    `${scrollPercentage}%`;
-});
+// #endregion
 
 
-const themeToggle =
-  document.querySelector(".theme-toggle");
+// #region Render Skills
 
-const savedTheme =
-  localStorage.getItem("theme");
+function renderSkills(skills) {
 
-if (savedTheme === "light") {
+  skills.forEach(skill => {
 
-  document.body.classList.add("light-theme");
+    const skillElement =
+      document.createElement("li");
 
-  themeToggle.textContent = "🌙";
+    skillElement.textContent =
+      skill;
+
+    skillsContainer.appendChild(
+      skillElement
+    );
+  });
 }
 
-themeToggle.addEventListener("click", () => {
+// #endregion
 
-  document.body.classList.toggle("light-theme");
 
-  const isLight =
-    document.body.classList.contains("light-theme");
+// #region Render Projects
 
-  localStorage.setItem(
-    "theme",
-    isLight ? "light" : "dark"
+function renderProjects(projects) {
+
+  projects.forEach(project => {
+
+    const projectCard =
+      document.createElement("article");
+
+    projectCard.className =
+      "project-card";
+
+    projectCard.innerHTML = `
+      <h3>${project.title}</h3>
+      <p>${project.description}</p>
+    `;
+
+    projectsContainer.appendChild(
+      projectCard
+    );
+  });
+}
+
+// #endregion
+
+
+// #region Render Timeline
+
+function renderTimeline(timeline) {
+
+  timeline.forEach(item => {
+
+    const timelineItem =
+      document.createElement("article");
+
+    timelineItem.className =
+      "timeline-item";
+
+    timelineItem.innerHTML = `
+      <span class="timeline-dot"></span>
+
+      <div>
+        <p class="timeline-date">
+          ${item.date}
+        </p>
+
+        <h3>${item.title}</h3>
+
+        <p>${item.description}</p>
+      </div>
+    `;
+
+    timelineContainer.appendChild(
+      timelineItem
+    );
+  });
+}
+
+// #endregion
+
+
+// #region Initialize App
+
+async function initializeApp() {
+
+  const cvData =
+    await loadCvData();
+
+  renderSkills(
+    cvData.skills
   );
 
-  themeToggle.textContent =
-    isLight ? "🌙" : "☀️";
-});
+  renderProjects(
+    cvData.projects
+  );
+
+  renderTimeline(
+    cvData.timeline
+  );
+}
+
+initializeApp();
+
+// #endregion
 

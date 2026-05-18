@@ -1,14 +1,7 @@
 {
-  "personal": {
-    "name": "Mike",
-    "title": "C# .NET Backend Developer",
-    "location": "Denmark",
-    "email": "your@email.com",
-    "github": "https://github.com/codemikemike"
-  },
-
-  "about": {
-    "description": "Passionate backend developer focused on scalable, maintainable and secure systems using modern .NET technologies."
+  "hero": {
+    "title": "Building modern backend systems and developer experiences.",
+    "description": "Datamatiker student focused on ASP.NET Core, APIs, architecture, security and scalable systems."
   },
 
   "skills": [
@@ -19,13 +12,39 @@
     "SQL Server",
     "Docker",
     "JWT",
-    "GitHub"
+    "GitHub",
+    "REST APIs",
+    "Clean Architecture"
   ],
 
   "projects": [
     {
-      "name": "Slottets-Drifttavlen",
-      "description": "Semester project focused on architecture, maintainability and backend systems."
+      "title": "Slottets-Drifttavlen",
+      "description": "Fullstack semester project focused on backend architecture, maintainability and scalable systems."
+    },
+
+    {
+      "title": "Authentication API",
+      "description": "JWT authentication system using ASP.NET Core and secure token handling."
+    },
+
+    {
+      "title": "Docker Infrastructure",
+      "description": "Containerized backend environment using Docker and SQL Server."
+    }
+  ],
+
+  "timeline": [
+    {
+      "date": "2024 — Present",
+      "title": "Datamatiker Student",
+      "description": "Studying software development with focus on C#, .NET, databases and system development."
+    },
+
+    {
+      "date": "Semester Project",
+      "title": "Slottets-Drifttavlen",
+      "description": "Worked with repositories, interfaces, Docker, SQL Server and Clean Architecture."
     }
   ]
 }
