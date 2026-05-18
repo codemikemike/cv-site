@@ -1655,3 +1655,50 @@ body {
 
 /* #endregion */
 
+
+/* #region Profile Image Placeholder */
+
+.profile-frame {
+  width: 360px;
+  height: 420px;
+  padding: 1rem;
+  border-radius: 34px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.16),
+      rgba(255,255,255,.04)
+    );
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 30px 100px rgba(0,0,0,.45);
+}
+
+.profile-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 26px;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at top left, rgba(91,140,255,.45), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(56,189,248,.35), transparent 35%),
+    #0f172a;
+  border: 1px solid rgba(255,255,255,.10);
+}
+
+.profile-placeholder span {
+  font-size: 5rem;
+  font-weight: 900;
+  letter-spacing: -5px;
+  color: rgba(255,255,255,.92);
+}
+
+@media (max-width: 900px) {
+  .profile-frame {
+    width: 260px;
+    height: 300px;
+  }
+}
+
+/* #endregion */
+
