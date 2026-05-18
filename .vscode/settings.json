@@ -1,0 +1,10 @@
+{
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "files.autoSave": "afterDelay",
+  "editor.minimap.enabled": false,
+  "editor.wordWrap": "on",
+  "editor.guides.bracketPairs": true,
+  "html.format.wrapLineLength": 120,
+  "css.validate": true
+}
