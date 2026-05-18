@@ -7,11 +7,13 @@ import { renderTimeline } from "./renderers/timeline.renderer.js";
 
 import { initializeTheme } from "./utils/theme.js";
 import { initializeScrollProgress } from "./utils/scroll-progress.js";
+import { initializeMobileNavigation } from "./utils/mobile-navigation.js";
 
 async function bootstrap() {
   try {
     initializeTheme();
     initializeScrollProgress();
+    initializeMobileNavigation();
 
     const cv = await getCvData();
 
