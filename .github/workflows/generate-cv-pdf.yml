@@ -15,9 +15,6 @@ jobs:
   build-pdf:
     runs-on: ubuntu-latest
 
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -27,21 +24,24 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y pandoc
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
       - name: Install Playwright
         run: |
-          npm init -y
           npm install playwright
-          npx playwright install --with-deps chromium
+          npx playwright install chromium --with-deps
 
-      - name: Generate styled HTML
+      - name: Generate HTML
         run: |
           pandoc docs/cv.md \
             --standalone \
             --css=cv-pdf.css \
-            --metadata title="Mike CV" \
             -o docs/cv.html
 
-      - name: Generate PDF with Chromium
+      - name: Generate PDF from HTML
         run: |
           node scripts/generate-pdf.mjs
 
@@ -52,6 +52,6 @@ jobs:
 
           git add docs/cv.html docs/cv.pdf
 
-          git commit -m "Generate styled CV PDF" || echo "No changes"
+          git commit -m "Generate modern styled CV PDF" || echo "No changes"
 
           git push
